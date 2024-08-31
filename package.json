@@ -2,11 +2,11 @@
   "name": "portfolio-asakai",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://asakaicode.github.io",
+  "homepage": "https://asakaicode.github.io/portfolio-asakai",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@latest out",
     "lint": "next lint",
     "deploy": "gh-pages -d build"
   },
