@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
-import { makeStyles } from "@mui/styles";
+"use client"
 
-export const metadata: Metadata = {
-  title: "asakaicodeのポートフォリオ",
-  description: "asakaiのポートフォリオです。",
-};
+import { makeStyles } from "@mui/styles";
 
 export default function RootLayout({
   children,

@@ -1,6 +1,8 @@
+"use client"
+
 import useStyles from "./style"
 
-const Header: React.FC = () => {
+const Header = () => {
   const classes = useStyles()
 
   return (
