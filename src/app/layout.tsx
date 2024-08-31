@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { makeStyles } from "@mui/styles";
 
 export const metadata: Metadata = {
   title: "asakaicodeのポートフォリオ",
@@ -14,9 +11,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const classes = useStyles()
+
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <body className={classes.root}>{children}</body>
     </html>
   );
 }
+
+const useStyles = makeStyles({
+  root: {
+    alignItems: "center",
+  },
+})
