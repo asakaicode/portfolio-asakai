@@ -1,23 +1,17 @@
-"use client"
-
-import { makeStyles } from "@mui/styles";
+import Head from "next/head";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const classes = useStyles()
-
   return (
     <html lang="ja">
-      <body className={classes.root}>{children}</body>
+      <Head>
+        <title>asakaicodeのポートフォリオ</title>
+        <meta name="description" content="asakaicodeのポートフォリオです。" />
+      </Head>
+      <body>{children}</body>
     </html>
   );
 }
-
-const useStyles = makeStyles({
-  root: {
-    alignItems: "center",
-  },
-})

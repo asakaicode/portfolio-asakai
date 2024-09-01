@@ -2,11 +2,15 @@
 
 import useStyles from "./style"
 
-const Header = () => {
+interface HeaderProps {
+  isSticked?: boolean
+}
+
+const Header = ({ isSticked }: HeaderProps) => {
   const classes = useStyles()
 
   return (
-    <div className={classes.container}>
+    <div className={isSticked ? classes.stickedContainer : classes.container}>
       <div>asakaicode</div>
       <div>about me</div>
       <div>works</div>
